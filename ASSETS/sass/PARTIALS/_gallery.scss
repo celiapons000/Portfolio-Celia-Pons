@@ -1,0 +1,147 @@
+@use 'variables' as *;
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.work-card {
+  position: relative;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.work-card__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: $color-text;
+}
+
+.work-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.18)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.work-card:hover .work-card__link::after {
+  opacity: 1;
+}
+
+.work-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.34;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.work-card:hover .work-card__image {
+  transform: scale(1.03);
+}
+
+.work-card__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 4.5rem 1rem 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  pointer-events: none;
+  z-index: 2;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+}
+
+.work-card:hover .work-card__info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-card__title {
+  font-size: clamp(0.9rem, 0.75rem + 0.4vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1;
+  color: $color-text;
+  text-align: left;
+  margin: 0;
+}
+
+.work-card__category {
+  margin: 0.25rem 0 0 0;
+  font-size: clamp(0.6rem, 0.55rem + 0.15vw, 0.75rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: $color-text;
+  text-align: left;
+}
+
+.work-card__title span,
+.work-card__category span {
+  display: inline-block;
+}
+
+.work-card__space {
+  width: 0.28em;
+}
+
+@media (max-width: 56rem) {
+  .work-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 38rem) {
+  .work-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card__link::after {
+    display: none;
+  }
+
+  .work-card:hover .work-card__image {
+    transform: none;
+  }
+
+  .work-card__info {
+    opacity: 0;
+    transform: none;
+    transition: none;
+    padding: 5.5rem 1rem 1.2rem;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.55) 35%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .work-card:hover .work-card__info {
+    opacity: 0;
+    transform: none;
+  }
+}

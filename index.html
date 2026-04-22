@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- SWIPER CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  >
+
+  <!-- TU CSS DESPUÉS, para que tus estilos manden -->
+  <link rel="stylesheet" href="ASSETS/css/main.css">
+</head>
+
+<body>
+  <div class="site-wrapper">
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegación principal">
+
+        <a href="index.html" class="nav__brand">
+          <span class="nav__logo">
+            <img src="ASSETS/IMG/logo_celia.png" alt="Logo Celia Pons">
+          </span>
+          <span class="nav__name">Celia Pons</span>
+        </a>
+
+        <ul class="nav__menu">
+          <li class="nav__item nav__item--active">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="nav__item">
+            <a href="mywork.html">MY WORK</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html">ABOUT</a>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <main class="home">
+
+      <section class="hero container">
+        <div class="hero__meta hero__meta--left">[MADRID]</div>
+
+        <div class="hero__intro">
+          <h1 class="hero__title">CELIA PONS RICO</h1>
+          <p class="hero__subtitle">ILLUSTRATION AND GRAPHIC DESIGN</p>
+        </div>
+
+        <div class="hero__meta hero__meta--right">[PORTFOLIO 2026]</div>
+      </section>
+
+      <section class="projects"></section>
+
+    </main>
+  </div>
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+  <!-- JS -->
+   <div class="custom-cursor"></div>
+  <script src="ASSETS/js/cursor.js"></script>
+  <script src="ASSETS/js/carrousel.js"></script>
+  <script src="ASSETS/js/hero-animation.js"></script>
+  <script src="ASSETS/js/work.js"></script>
+</body>
+</html>

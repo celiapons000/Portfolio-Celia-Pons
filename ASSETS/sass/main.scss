@@ -1,0 +1,49 @@
+@use 'PARTIALS/reset';
+@use 'PARTIALS/variables';
+
+@use 'PARTIALS/typography';
+@use 'PARTIALS/base';
+
+@use 'PARTIALS/nav';
+@use 'PARTIALS/hero';
+@use 'PARTIALS/home';
+
+@use 'PARTIALS/carousel';
+
+@use 'PARTIALS/mywork';
+@use 'PARTIALS/gallery';
+
+@use 'PARTIALS/about';
+
+@use 'PARTIALS/project-detail';
+
+@use 'PARTIALS/project-stack';
+
+
+/* ELIMINAR TODOS LOS CURSORES NATIVOS */
+* {
+  cursor: none !important;
+}
+
+/* CURSOR CUSTOM */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+
+  background: #fcea10; 
+  border: 0.3px solid #000; 
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 40rem) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

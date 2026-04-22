@@ -1,0 +1,135 @@
+@use 'variables' as *;
+
+.about {
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+}
+
+/* INTRO */
+.about__intro {
+  width: 100%;
+  max-width: calc(50% - 2rem);
+  margin-inline: 0;
+  text-align: left;
+  display: grid;
+  gap: 1.4rem;
+}
+
+/* LOGO */
+.about__logo {
+  width: clamp(2.4rem, 4vw, 3.5rem);
+  margin-left: clamp(1.2rem, 4vw, 4rem);
+  overflow: visible;
+}
+
+.about__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.about__logo img:active {
+  cursor: grabbing;
+}
+
+/* TEXTO */
+.about__text {
+  font-size: clamp(0.9rem, 0.8rem + 0.35vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: clamp(1.2rem, 4vw, 4rem);
+  max-width: 32rem;
+}
+
+/* GRID */
+.about__grid {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+/* TITLES */
+.about__title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  color: $color-text;
+}
+
+.about__list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.about__item {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CONTACT */
+.about__contact {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.about__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about__icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* REVEAL */
+.about-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
+}
+
+/* TABLET */
+@media (max-width: 64rem) {
+  .about__intro {
+    max-width: 70%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 48rem) {
+  .about__intro {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .about__logo {
+    margin-left: clamp(0.8rem, 3vw, 1.5rem);
+  }
+
+  .about__text {
+    margin-left: clamp(0.8rem, 3vw, 1.5rem);
+    max-width: 100%;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+}

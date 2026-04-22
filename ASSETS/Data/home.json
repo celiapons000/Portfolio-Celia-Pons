@@ -1,0 +1,43 @@
+{
+  "carousels": [
+    {
+      "id": "bandcamp",
+      "title": "REBRANDING BANDCAMP",
+      "tags": ["BRAND IDENTITY", "WEB DESIGN", "2026"],
+      "link": "HOME-WORK/homework1.html",
+      "alignment": "left",
+      "images": [
+        "ASSETS/IMG/home_projects/bandcamp0.jpg",
+        "ASSETS/IMG/home_projects/bandcamp2.jpg",
+        "ASSETS/IMG/home_projects/bandcamp3.jpg",
+        "ASSETS/IMG/home_projects/bandcamp4.jpg"
+      ]
+    },
+    {
+      "id": "teatros",
+      "title": "REBRANDING TEATROS DEL CANAL",
+      "tags": ["BRAND IDENTITY", "2025"],
+      "link": "HOME-WORK/homework2.html",
+      "alignment": "right",
+      "images": [
+        "ASSETS/IMG/home_projects/teatros1.jpg",
+        "ASSETS/IMG/home_projects/teatros2.jpg",
+        "ASSETS/IMG/home_projects/teatros3.jpg",
+        "ASSETS/IMG/home_projects/teatros4.jpg"
+      ]
+    },
+    {
+      "id": "chimpatia",
+      "title": "REBRANDING CHIMPATÍA",
+      "tags": ["BRAND IDENTITY", "2025"],
+      "link": "HOME-WORK/homework3.html",
+      "alignment": "left",
+      "images": [
+        "ASSETS/IMG/home_projects/chimpatia1.jpg",
+        "ASSETS/IMG/home_projects/chimpatia2.jpg",
+        "ASSETS/IMG/home_projects/chimpatia3.jpg",
+        "ASSETS/IMG/home_projects/chimpatia4.jpg"
+      ]
+    }
+  ]
+}
