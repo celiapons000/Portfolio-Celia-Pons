@@ -1,35 +1,9 @@
-@use 'variables' as *;
-
-html {
-  scrollbar-width: none; // Firefox
-}
+@use "variables" as *;
 
 body {
-  background-color: $color-bg;
-  color: $color-text;
-  min-height: 100vh;
-  -ms-overflow-style: none; // IE y Edge antiguo
-}
-
-body::-webkit-scrollbar {
-  display: none; // Chrome, Safari, Edge
-}
-
-.site-wrapper {
   width: 100%;
-  overflow-x: clip;
-}
-
-.container {
-  width: min($container-width, $max-width);
-  margin-inline: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 0.0625rem;
-  block-size: 0.0625rem;
+  min-height: 100vh;
   overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  font-family: $font-pixel;
+  background-color: #000;
 }

@@ -1,0 +1,101 @@
+@use "variables" as *;
+
+.screen--failed {
+  justify-content: center;
+  align-items: center;
+
+  background-color: #202020;
+  overflow: hidden;
+}
+
+.failed-stage {
+  position: relative;
+
+  height: 100vh;
+  width: calc(100vh * 1.3333);
+  max-width: 100vw;
+
+  overflow: hidden;
+
+  background-color: #202020;
+  background-image: url("../IMG/screens/failed-background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  image-rendering: pixelated;
+}
+
+.failed-character {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 48%;
+  max-height: 86%;
+
+  object-fit: contain;
+  object-position: bottom center;
+
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.failed-back-btn {
+  position: absolute;
+  right: 6%;
+  bottom: 4%;
+
+  width: 220px;
+  height: 64px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $font-pixel;
+  font-size: 0.62rem;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #111;
+
+  border: none;
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  image-rendering: pixelated;
+
+  transition: transform 0.12s ease;
+}
+
+.failed-back-btn--ana {
+  background-image: url("../IMG/ui/button-ana-pink.png");
+}
+
+.failed-back-btn--carlos {
+  background-image: url("../IMG/ui/button-carlos-red.png");
+}
+
+.failed-back-btn--maria {
+  background-image: url("../IMG/ui/button-maria-orange.png");
+}
+
+.failed-back-btn--jorge {
+  background-image: url("../IMG/ui/button-jorge-blue.png");
+}
+
+.failed-back-btn:hover {
+  transform: translateY(-4px);
+}
+
+.failed-back-btn:active {
+  transform: translateY(0) scale(0.98);
+}

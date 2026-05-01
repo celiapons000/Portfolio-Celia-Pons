@@ -1,0 +1,69 @@
+.shoe-btn {
+  position: absolute;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  image-rendering: pixelated;
+  transition: transform 0.15s ease;
+}
+
+.shoe-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.shoe-btn:hover {
+  transform: translateY(-6px) scale(1.04);
+}
+
+.shoe-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ZAPATO ARRIBA IZQUIERDA - ZAPATILLA GRIS */
+.shoe-btn--jorge {
+  width: 16vw;
+  max-width: 170px;
+  min-width: 100px;
+
+  left: 33%;
+  top: 8%;
+}
+
+/* ZAPATO ARRIBA DERECHA - ZAPATO NEGRO */
+.shoe-btn--ana {
+  width: 15vw;
+  max-width: 160px;
+  min-width: 95px;
+
+  left: 57%;
+  top: 16%;
+}
+
+/* ZAPATO ABAJO IZQUIERDA - BOTA AZUL/NEGRA */
+.shoe-btn--carlos {
+  width: 17vw;
+  max-width: 185px;
+  min-width: 110px;
+
+  left: 27%;
+  top: 31%;
+}
+
+/* ZAPATO ABAJO DERECHA - BOTA ROJA */
+.shoe-btn--maria {
+  width: 17vw;
+  max-width: 185px;
+  min-width: 110px;
+
+  left: 52%;
+  top: 35%;
+}

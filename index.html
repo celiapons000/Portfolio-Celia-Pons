@@ -3,79 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Ponte en mis zapatos</title>
 
+  <!-- Tipografía pixel de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <!-- SWIPER CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-  >
-
-  <!-- TU CSS DESPUÉS, para que tus estilos manden -->
   <link rel="stylesheet" href="ASSETS/css/main.css">
 </head>
 
 <body>
-  <div class="site-wrapper">
 
-    <header class="site-header">
-      <nav class="nav container" aria-label="Navegación principal">
+  <main class="game">
 
-        <a href="index.html" class="nav__brand">
-          <span class="nav__logo">
-            <img src="ASSETS/IMG/logo_celia.png" alt="Logo Celia Pons">
-          </span>
-          <span class="nav__name">Celia Pons</span>
-        </a>
+    <!-- PANTALLA DE INICIO -->
+    <section class="screen screen--start is-active" id="startScreen">
+      <button class="pixel-btn pixel-btn--start" id="startButton">
+        JUGAR
+      </button>
+    </section>
 
-        <ul class="nav__menu">
-          <li class="nav__item nav__item--active">
-            <a href="index.html">HOME</a>
-          </li>
-          <li class="nav__item">
-            <a href="mywork.html">MY WORK</a>
-          </li>
-          <li class="nav__item">
-            <a href="about.html">ABOUT</a>
-          </li>
-        </ul>
+    <!-- PANTALLA ESTANTERÍA -->
+    <section class="screen screen--shelf" id="shelfScreen">
 
-      </nav>
-    </header>
+      <button class="shoe-btn shoe-btn--jorge" data-character="jorge" aria-label="Elegir zapatos de Jorge">
+        <img src="ASSETS/IMG/shoes/shoe-jorge.png" alt="Zapatos de Jorge">
+      </button>
 
-    <main class="home">
+      <button class="shoe-btn shoe-btn--ana" data-character="ana" aria-label="Elegir zapatos de Ana">
+        <img src="ASSETS/IMG/shoes/shoe-ana.png" alt="Zapatos de Ana">
+      </button>
 
-      <section class="hero container">
-        <div class="hero__meta hero__meta--left">[MADRID]</div>
+      <button class="shoe-btn shoe-btn--carlos" data-character="carlos" aria-label="Elegir zapatos de Carlos">
+        <img src="ASSETS/IMG/shoes/shoe-carlos.png" alt="Zapatos de Carlos">
+      </button>
 
-        <div class="hero__intro">
-          <h1 class="hero__title">CELIA PONS RICO</h1>
-          <p class="hero__subtitle">ILLUSTRATION AND GRAPHIC DESIGN</p>
+      <button class="shoe-btn shoe-btn--maria" data-character="maria" aria-label="Elegir zapatos de María">
+        <img src="ASSETS/IMG/shoes/shoe-maria.png" alt="Zapatos de María">
+      </button>
+
+      <button class="pixel-btn pixel-btn--back" id="backToStartButton">
+        VOLVER A INICIO
+      </button>
+
+    </section>
+
+    <!-- PANTALLA PERSONAJE -->
+    <section class="screen screen--character" id="characterScreen">
+
+      <div class="character-stage" id="characterStage">
+
+        <div class="dialogue-box">
+          <div class="dialogue-name" id="characterName"></div>
+          <p class="dialogue-text" id="dialogueText"></p>
         </div>
 
-        <div class="hero__meta hero__meta--right">[PORTFOLIO 2026]</div>
-      </section>
+        <div class="choice-group" id="choiceGroup">
+          <button class="choice-btn" id="choiceOne"></button>
+          <button class="choice-btn" id="choiceTwo"></button>
+        </div>
 
-      <section class="projects"></section>
+        <img class="character-image" id="characterImage" src="" alt="Personaje">
 
-    </main>
-  </div>
+      </div>
 
-  <!-- SWIPER JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    </section>
 
-<!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <!-- PANTALLA YOU FAILED -->
+    <section class="screen screen--failed" id="failedScreen">
 
-  <!-- JS -->
-   <div class="custom-cursor"></div>
-  <script src="ASSETS/js/cursor.js"></script>
-  <script src="ASSETS/js/carrousel.js"></script>
-  <script src="ASSETS/js/hero-animation.js"></script>
-  <script src="ASSETS/js/work.js"></script>
+      <div class="failed-stage" id="failedStage">
+
+        <img class="failed-character" id="failedCharacter" src="" alt="Personaje cansado">
+
+        <button class="failed-back-btn" id="backToShelfButton">
+          VOLVER
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="ASSETS/js/game-data.js"></script>
+  <script src="ASSETS/js/game.js"></script>
 </body>
 </html>

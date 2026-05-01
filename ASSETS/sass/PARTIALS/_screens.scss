@@ -1,0 +1,43 @@
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: relative;
+}
+
+.screen.is-active {
+  display: flex;
+}
+
+.screen--start {
+  justify-content: center;
+  align-items: flex-end;
+
+  background-color: #1da8f2;
+  background-image: url("../IMG/screens/start-screen.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 7vh;
+}
+
+.screen--shelf {
+  background-color: #c9aa7e;
+  background-image: url("../IMG/screens/shelf-background.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.screen--character {
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  background-color: #6c8f54;
+}
+
+.screen--failed {
+  overflow: hidden;
+}
